@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Header = () => {
+export const ProductosLista = () => {
     return (
         <div>
-            <h1>Header</h1>
+            <h1>Productos</h1>
         </div>
     )
 }
