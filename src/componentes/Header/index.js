@@ -21,6 +21,7 @@ export const Header = () => {
                 </ul>
                 <div className="cart">
                     <box-icon name="cart"></box-icon>
+                    <span className="item__total">0</span>
                 </div>
             </header>
         </div>
