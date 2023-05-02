@@ -66,3 +66,13 @@ header ul li{
 header ul li a{
   font-weight: bold;
 }
+
+header .cart{
+  position: relative;
+  cursor: pointer;
+}
+
+header .cart box-icon{
+  width: 45px;
+  height: 45px;
+}
