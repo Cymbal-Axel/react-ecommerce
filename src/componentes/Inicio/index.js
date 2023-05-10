@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Incio = () => {
+export const Inicio = () => {
     return(
         <div>
             <h1>Inicio</h1>
