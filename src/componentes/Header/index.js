@@ -16,7 +16,7 @@ export const Header = () => {
                     </li>
 
                     <li>
-                        <a href="#">PRODUCTOS</a>
+                        <a href="/productos">PRODUCTOS</a>
                     </li>
                 </ul>
                 <div className="cart">
