@@ -1,13 +1,15 @@
-import React from "reacr";
-import {Switch, Router} from 'react-router-dom';
+import React from "react";
+import {BrowserRouter as Router, Switch, Route, Routes, Link} from "react-router-dom";
+import { Inicio } from './Inicio';
+import { ProductosLista } from './Productos/index.js';
 
-
-export const paginas = () => {
+export const Paginas = () => {
     return (
         <section>
-            <Switch>
-                <Route path="/" exact component={Inicio} />
-            </Switch>
+            <Routes>
+                <Route path="/" element={<Inicio />}/>
+                <Route exact path="/productos"  element={<ProductosLista />} />
+            </Routes>
         </section>
     )
 }
