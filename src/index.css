@@ -22,7 +22,21 @@ code {
   padding: 0 15px;
   box-sizing: border-box;
 }
-/*--------productos-------*/
+/*--------INICIO-------*/
+.inicio{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 9rem;
+}
+.inicio h1{
+  font-size: 2.5rem;
+  color: #08a05c;
+}
+.inicio img{
+  width: 100%;
+}
+
+/*--------PRODUCTOS-------*/
 .title{
   font-size: 2rem;
   padding: 10rem 0 0 0;
@@ -180,7 +194,7 @@ header .cart span{
   padding: 0rem;
   font-size: 1.5rem;
   font-weight: 700;
-  background: red;
+  background: crimson;
 }
 
 @media only screen and (max-width: 600px){
