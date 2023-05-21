@@ -3,6 +3,12 @@ import IMG from "../../images/img01.jpg";
 import { DataContext } from "../../context/Dataprovider";
 
 export const ProductosLista = () => {
+
+    const value = useContext(DataContext)
+    const [productos] = value.productos
+
+    console.log(productos)
+
     return (
         <>
             <h1 className="title">PRODUCTOS</h1>
