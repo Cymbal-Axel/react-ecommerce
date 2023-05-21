@@ -8,11 +8,17 @@ export const DataProvider = (props) => {
 
     useEffect(() => {
         const producto = Data
-        setProductos(producto);
+        
+        if (producto) {
+            setProductos(producto)
+        } else {
+            setProductos([])
+        }
+
     },[])
 
     const value = {
-        producto : [productos]
+        productos : [productos]
     }
 
     return(
