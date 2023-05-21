@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import { DataContext } from "../../context/Dataprovider";
-import { ProductosItem } from './productoItem';
+import { ProductoItem } from './ProductoItem';
 
 export const ProductosLista = () => {
 
@@ -13,7 +13,7 @@ export const ProductosLista = () => {
         <>
             <h1 className="title">PRODUCTOS</h1>
             <div className="productos">
-
+                <ProductoItem />
                 
             </div>
         
