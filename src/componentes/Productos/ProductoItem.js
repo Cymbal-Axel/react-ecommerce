@@ -7,13 +7,13 @@ export const ProductoItem = ({id, title, price, image, category, cantidad}) => {
         <div className="producto">
             <a href="#">
             <div className="producto__img">
-                <img src={IMG} alt=""/>
+                <img src={image} alt={title}/>
             </div>
             </a>
             <div className="producto__footer">
-                <h1> Title </h1>
-                <p> Categoria </p>
-                <p className="price">$320</p>
+                <h1> {title} </h1>
+                <p> {category} </p>
+                <p className="price">${price}</p>
             </div>
             <div className="buttom">
                 <button className="btn">
