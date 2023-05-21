@@ -2,7 +2,7 @@ import React from 'react';
 import IMG from "../../images/img01.jpg";
 
 
-export const ProductoItem = () => {
+export const ProductoItem = ({id, title, price, image, category, cantidad}) => {
     return(
         <div className="producto">
             <a href="#">
