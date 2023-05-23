@@ -234,6 +234,8 @@ header .cart span{
 .carrito.show{
   transform: translate(-50%, -50%)
   scale(1.1);
+  opacity: 1;
+  visibility: hidden;
 }
 .carrito__close box-icon{
 
