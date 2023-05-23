@@ -13,7 +13,7 @@ export const Carrito = () =>{
                     <div className='carrito__item'>
                         <img src={Card} alt=''/>
                         <div>
-                            <h2>title</h2>
+                            <h3>title</h3>
                             <p className='price'>$345</p>
                         </div>
                         <div>
