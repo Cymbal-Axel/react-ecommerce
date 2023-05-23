@@ -283,6 +283,25 @@ header .cart span{
   cursor: pointer;
   margin-top: .3rem;
 }
+.carrito__item .cantidad{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.carrito__item .remove__item box-icon{
+  width: 60px;
+  height: 80px;
+  fill: crimson;
+  margin-top: 2rem;
+}
+.carrito__footer{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.carrito__footer h3{
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 /*------------MEDIA------------*/
 @media only screen and (max-width: 600px){
   header ul{
