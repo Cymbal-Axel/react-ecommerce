@@ -3,8 +3,8 @@ import  Card from '../../images/img08.jpg';
 
 export const Carrito = () =>{
     return(
-        <div className='carritos'>
-            <div className='carrito'>
+        <div className='carritos show'>
+            <div className='carrito show'>
                 <div className='carrito__close'>
                     <box-icon name='x'></box-icon>
                 </div>
