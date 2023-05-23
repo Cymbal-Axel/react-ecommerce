@@ -26,6 +26,10 @@ export const Carrito = () =>{
                         </div>
                     </div>
                 </div>
+                <div className='carrito__footer'>
+                    <h3>Total: $2334</h3>
+                    <button className='btn'>Payment</button>
+                </div>
             </div>
         </div>
     )
