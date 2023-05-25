@@ -11,7 +11,7 @@ export const Carrito = () =>{
     }
 
     const show1 = menu ? "carritos show" : "carritos";
-    const show2= meno ? "carrito show" : "carrito";
+    const show2= menu ? "carrito show" : "carrito";
 
 
     return(
