@@ -35,7 +35,9 @@ export const DataProvider = (props) => {
 
     const value = {
         productos : [productos],
-        menu: [menu, setMenu]
+        menu: [menu, setMenu],
+        addCarrito: addCarrito,
+        carrito: [carrito, setCarrito]
     }
 
     return(
