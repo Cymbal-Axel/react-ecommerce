@@ -1,6 +1,6 @@
 import React from 'react';
-import IMG from "../../images/img01.jpg";
-
+import { Link } from 'react-router-dom';
+import { DataContext } from '../../context/Dataprovider';
 
 export const ProductoItem = ({id, title, price, image, category, cantidad}) => {
     return(
