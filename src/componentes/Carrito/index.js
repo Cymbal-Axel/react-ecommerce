@@ -15,8 +15,8 @@ export const Carrito = () =>{
 
 
     return(
-        <div className='carritos'>
-            <div className='carrito'>
+        <div className={show1}>
+            <div className={show2}>
                 <div className='carrito__close' onClick={togglefalse}>
                     <box-icon name='x'></box-icon>
                 </div>
