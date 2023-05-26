@@ -7,7 +7,6 @@ export const Header = () => {
     const value = useContext(DataContext);
     const [menu, setMenu] = value.menu;
 
-    console.log(menu)
 
     const toggleMenu = () => {
         setMenu(!menu);
