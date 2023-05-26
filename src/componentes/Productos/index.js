@@ -7,7 +7,6 @@ export const ProductosLista = () => {
     const value = useContext(DataContext)
     const [productos] = value.productos
 
-    console.log(productos)
 
     return (
         <>
