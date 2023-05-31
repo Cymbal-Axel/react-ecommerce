@@ -40,11 +40,12 @@ export const DataProvider = (props) => {
             setCarrito(dataCarrito)
         }
     }, [])
-
+    
     useEffect(()=>{
-        localStorage.setItem('dataCarrito', JSON.stringify(carrito));
+        if(carrito.length >= 1){
+        localStorage.setItem('dataCarrito', JSON.stringify(carrito))}
     }, [carrito])
-
+    
 
 
 
