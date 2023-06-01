@@ -1,5 +1,4 @@
 import React, {useContext} from 'react';
-import  Card from '../../images/img08.jpg';
 import { DataContext } from '../../context/Dataprovider'
 
 export const Carrito = () =>{
@@ -15,6 +14,24 @@ export const Carrito = () =>{
     const show2= menu ? "carrito show" : "carrito";
 
 
+    const resta = id => {
+        carrito.forEach(item => {
+            if (item.id === id){
+                item.cantidad === 1 ? item.cantidad = 1: item.cantidad -= 1;
+            }
+            setCarrito([...carrito]);
+        })
+    }
+
+    const suma = id => {
+        carrito.forEach(item => {
+            if (item.id === id){
+                item.cantidad += 1;
+            }
+            setCarrito([...carrito]);
+        })
+    }
+
     const removeProducto = id => {
         if(window.confirm("Quieres suspender el producto?")){
             carrito.forEach((item, index) =>{
@@ -27,7 +44,7 @@ export const Carrito = () =>{
         }
         
     }
-
+    console.log(carrito)
     return(
         <div className={show1}>
             <div className={show2}>
@@ -38,16 +55,16 @@ export const Carrito = () =>{
                 <div className='carrito__center'>
                     {
                         carrito.map((producto)=>
-                        <div className='carrito__item'>
+                        <div className='carrito__item' key={producto.id}>
                         <img src={producto.image} alt=''/>
                         <div>
                             <h3>{producto.title}</h3>
                             <p className='price'>${producto.price}</p>
                         </div>
                         <div>
-                            <box-icon name='up-arrow' type='solid'></box-icon>
+                            <box-icon name='up-arrow' type='solid' onClick={() => suma(producto.id)}></box-icon>
                             <p className='cantidad'>{producto.cantidad}</p>
-                            <box-icon name='down-arrow' type='solid'></box-icon>
+                            <box-icon name='down-arrow' type='solid' onClick={() => resta(producto.id)}></box-icon>
                         </div>
                         <div className='remove__item'>
                             <box-icon name='trash' onClick={() => removeProducto(producto.id)}></box-icon>
