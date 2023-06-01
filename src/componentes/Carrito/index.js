@@ -44,7 +44,6 @@ export const Carrito = () =>{
         }
         
     }
-    console.log(carrito)
     return(
         <div className={show1}>
             <div className={show2}>
@@ -54,6 +53,11 @@ export const Carrito = () =>{
                 <h2>Su carrito</h2>
                 <div className='carrito__center'>
                     {
+
+                        carrito.length === 0 ? <h2 style={{
+                            textAlign: "center", fontSize: "3rem"
+                        }}>Carrito vacio</h2> : <> 
+                        {
                         carrito.map((producto)=>
                         <div className='carrito__item' key={producto.id}>
                         <img src={producto.image} alt=''/>
@@ -70,12 +74,18 @@ export const Carrito = () =>{
                             <box-icon name='trash' onClick={() => removeProducto(producto.id)}></box-icon>
                         </div>
                     </div>)}
+                    </>}
+                    
+                    
                 </div>
                 <div className='carrito__footer'>
                     <h3>Total: $2334</h3>
                     <button className='btn'>Payment</button>
                 </div>
+                
+                    
             </div>
+                        
         </div>
     )
 }
