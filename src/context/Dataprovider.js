@@ -49,7 +49,6 @@ export const DataProvider = (props) => {
 
 
 
-    console.log(carrito)
 
     const value = {
         productos : [productos],
