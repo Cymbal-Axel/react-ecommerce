@@ -15,6 +15,19 @@ export const Carrito = () =>{
     const show2= menu ? "carrito show" : "carrito";
 
 
+    const removeProducto = id => {
+        if(window.confirm("Quieres suspender el producto?")){
+            carrito.forEach((item, index) =>{
+                if (item.id === id){
+                    item.cantidad = 1;
+                    carrito.splice(index, 1)
+                }
+            })
+            setCarrito([...carrito])
+        }
+        
+    }
+
     return(
         <div className={show1}>
             <div className={show2}>
@@ -37,7 +50,7 @@ export const Carrito = () =>{
                             <box-icon name='down-arrow' type='solid'></box-icon>
                         </div>
                         <div className='remove__item'>
-                            <box-icon name='trash'></box-icon>
+                            <box-icon name='trash' onClick={() => removeProducto(producto.id)}></box-icon>
                         </div>
                     </div>)}
                 </div>
