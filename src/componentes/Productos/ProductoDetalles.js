@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { DataContext } from '../../context/Dataprovider';
 import { useParams } from 'react-router-dom';
 
