@@ -8,15 +8,28 @@ export const ProductoDetalles = () =>{
     const [productos] = value.productos;
     const params = useParams();
     const [detalle, setDetalle] = useState([]);
+    const [url, setUrl] = useState(0)
+    const [images, setImages] = useState("")
 
     useEffect(()=>{
         productos.forEach(producto => {
             if(producto.id === parseInt(params.id)){
                 setDetalle(producto);
+                setUrl(0)
             }  
         })
     },[params.id, productos])
-console.log(detalle)
+
+    useEffect(() => {
+        const values = `${detalle.img1}${url}${detalle.img2}`;
+        setImages(values);
+    },[url, params.id])
+    const handleInput = e => {
+        const number = e.target.value.toString().padStart(2, "01")
+        setUrl(number)
+        console.log(number)
+    }
+
     return (
         <>
         {
@@ -41,8 +54,8 @@ console.log(detalle)
                     </div>
                 </div>
                 <button>Añadir al carrito</button>
-                <img src={detalle.image} alt={detalle.title}/>
-                <input type="range" min="1" max="36"/>
+                <img src={images} alt={detalle.title}/>
+                <input type="range" min="1" max="36" value={url} onChange={handleInput}/>
                 <div className="description">
                     <p><b>description:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
