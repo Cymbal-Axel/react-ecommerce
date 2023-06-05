@@ -40,6 +40,9 @@ console.log(detalle)
                         <p>Tamaño</p>
                     </div>
                 </div>
+                <button>Añadir al carrito</button>
+                <img src={detalle.image} alt={detalle.title}/>
+                <input type="range" min="1" max="36"/>
             </div>
         }
         </>
