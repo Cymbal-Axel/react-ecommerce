@@ -325,6 +325,16 @@ cursor: pointer;
   background-color: #0f5c39;
   color: white;
 }
+
+/*------------PRODUCTO DETALLES------------*/
+.detalles{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 13rem 1rem 0 1rem;
+  box-sizing: border-box;
+}
+
 /*------------MEDIA------------*/
 @media only screen and (max-width: 1000px){
   .carrito__item{
