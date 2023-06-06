@@ -27,7 +27,6 @@ export const ProductoDetalles = () =>{
     const handleInput = e => {
         const number = e.target.value.toString().padStart(2, "01")
         setUrl(number)
-        console.log(number)
     }
 
     return (
@@ -54,7 +53,7 @@ export const ProductoDetalles = () =>{
                     </div>
                 </div>
                 <button>Añadir al carrito</button>
-                <img src={images} alt={detalle.title}/>
+                <img src={detalle.image} alt={detalle.title}/>
                 <input type="range" min="1" max="36" value={url} onChange={handleInput}/>
                 <div className="description">
                     <p><b>description:</b>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
